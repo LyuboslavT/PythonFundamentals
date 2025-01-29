@@ -4,16 +4,16 @@ pours = int(input())
 
 poured_liters = 0
 
-for _ in range(1, pours + 1):
+for _ in range(pours):
     current_pour = int(input())
 
 
-    TANK_CAPACITY -= current_pour
 
-    if current_pour > TANK_CAPACITY:
-        print("insufficient capacity!")
-        continue
+    if poured_liters + current_pour > TANK_CAPACITY:
+        print("Insufficient capacity!")
 
-    poured_liters += current_pour
+    else:
+        poured_liters += current_pour
+
 
 print(poured_liters)
